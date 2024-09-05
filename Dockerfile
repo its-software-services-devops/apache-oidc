@@ -7,4 +7,6 @@ RUN apt-get -y update && apt-get -y upgrade
 RUN apt-get -y install libjansson4 libhiredis0.14 && \
     rm -r /var/lib/apt/lists /var/cache/apt/archives
 
+RUN a2enmod auth_openidc
+
 USER 1001
