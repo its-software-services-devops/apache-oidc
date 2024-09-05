@@ -1,5 +1,5 @@
 FROM httpd:2.4.62
-LABEL maintainer "pjame.fb@gmail.com"
+LABEL maintainer="pjame.fb@gmail.com"
 
 ARG MOD_AUTH_OPENIDC_VERSION=2.4.16.2
 
@@ -10,7 +10,7 @@ RUN \
     && RUNTIME_DEPS="\
         apache2-bin \
         libcjose0 \
-        libhiredis0.13 \
+        libhiredis0.14 \
         libjansson4" \
     && MOD_AUTH_OPENIDC_URL=https://github.com/OpenIDC/mod_auth_openidc/releases/download/v"$MOD_AUTH_OPENIDC_VERSION"/libapache2-mod-auth-openidc_"$MOD_AUTH_OPENIDC_VERSION"-1.jammy_amd64.deb \
     && apt update \
